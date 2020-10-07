@@ -87,7 +87,7 @@ class _TarjetaBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: (noticia.description != null ) ? Text( noticia.description ) : '',
+      child: (noticia.description != null ) ? Text( noticia.description ) : Text(''),
     );
   }
 }

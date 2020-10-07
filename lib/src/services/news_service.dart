@@ -17,12 +17,12 @@ class NewsService with ChangeNotifier {
 
   List<Category> categories = [
     Category( FontAwesomeIcons.building, 'business' ),
-    Category( FontAwesomeIcons.building, 'entertainment' ),
-    Category( FontAwesomeIcons.building, 'general' ),
-    Category( FontAwesomeIcons.building, 'health' ),
-    Category( FontAwesomeIcons.building, 'science' ),
-    Category( FontAwesomeIcons.building, 'sports' ),
-    Category( FontAwesomeIcons.building, 'technology' ),
+    Category( FontAwesomeIcons.tv, 'entertainment' ),
+    Category( FontAwesomeIcons.addressCard, 'general' ),
+    Category( FontAwesomeIcons.headSideVirus, 'health' ),
+    Category( FontAwesomeIcons.vials, 'science' ),
+    Category( FontAwesomeIcons.volleyballBall, 'sports' ),
+    Category( FontAwesomeIcons.memory, 'technology' ),
   ];
   //business entertainment general health science sports technology
 
@@ -75,5 +75,8 @@ class NewsService with ChangeNotifier {
 
     notifyListeners();
   }
+
+  List<Article> get getArticulosCategoriaSelect 
+     => this.categoryArticles[this.selectedCategory];
 
 }
