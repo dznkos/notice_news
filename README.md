@@ -1,6 +1,9 @@
 # notice_news
 
-A new Flutter project.
+App Notice News
+
+![newsapp](https://i.ibb.co/J5JzJ4Y/news.png)
+![category](https://i.ibb.co/0GxFzj6/newscat.png)
 
 ## Getting Started
 
