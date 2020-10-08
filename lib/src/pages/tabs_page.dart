@@ -33,8 +33,8 @@ class _Navegacion extends StatelessWidget {
       currentIndex: navegacionModel.paginaActual,
       onTap: (i) => navegacionModel.paginaActual = i,
       items: [
-        BottomNavigationBarItem(icon: Icon(Icons.person_outline), title: Text('Uno')),
-        BottomNavigationBarItem(icon: Icon(Icons.public), title: Text('Encabezados')),
+        BottomNavigationBarItem(icon: Icon(Icons.public), title: Text('Global')),
+        BottomNavigationBarItem(icon: Icon(Icons.whatshot), title: Text('Category')),
 
       ] 
     

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notice_news/src/services/news_service.dart';
-import 'package:notice_news/src/widgets/lista_notice.dart';
+
+import 'package:notice_news/src/widgets/lista_notice_main.dart';
 import 'package:provider/provider.dart';
 
 class Tab1Page extends StatefulWidget {
@@ -14,10 +15,10 @@ class _Tab1PageState extends State<Tab1Page> with AutomaticKeepAliveClientMixin{
 
     final headlines = Provider.of<NewsService>(context).headlines;
 
-    return Scaffold(
+    return Scaffold(      
       body: ( headlines.length == 0 ) 
             ? Center( child: CircularProgressIndicator(), )
-            : ListaNotice(headlines)
+            : ListaNoticeMain(headlines)
     );
 
   }

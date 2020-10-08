@@ -15,6 +15,8 @@ class NewsService with ChangeNotifier {
   List<Article> headlines = [];
   String _selectedCategory = 'business';
 
+  bool _isLoading = true;
+
   List<Category> categories = [
     Category( FontAwesomeIcons.building, 'business' ),
     Category( FontAwesomeIcons.tv, 'entertainment' ),
@@ -36,6 +38,8 @@ class NewsService with ChangeNotifier {
     }
     );
   }
+
+  bool get isLoading => this._isLoading;
 
   getTopHeadlines() async{
 
@@ -62,6 +66,9 @@ class NewsService with ChangeNotifier {
   getCategorias(String category) async {
 
     if ( this.categoryArticles[category].length > 0 ) {
+
+      this._isLoading = false;
+      notifyListeners();
       return this.categoryArticles[category];
     }
 
@@ -73,8 +80,11 @@ class NewsService with ChangeNotifier {
     
     this.categoryArticles[category].addAll( newsResponse.articles );
 
+    this._isLoading = false;  
+
     notifyListeners();
-  }
+
+  }  
 
   List<Article> get getArticulosCategoriaSelect 
      => this.categoryArticles[this.selectedCategory];
